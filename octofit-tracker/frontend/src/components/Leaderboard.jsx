@@ -44,8 +44,8 @@ function toDisplayValue(value) {
   return String(value)
 }
 
-export default function Leaderboard({ apiBaseUrl }) {
-  const endpoint = `${apiBaseUrl}/leaderboard/`
+export default function Leaderboard() {
+  const endpoint = '/api/leaderboard/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)

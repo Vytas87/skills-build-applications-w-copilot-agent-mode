@@ -44,8 +44,8 @@ function toDisplayValue(value) {
   return String(value)
 }
 
-export default function Workouts({ apiBaseUrl }) {
-  const endpoint = `${apiBaseUrl}/workouts/`
+export default function Workouts() {
+  const endpoint = '/api/workouts/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)

@@ -44,8 +44,8 @@ function toDisplayValue(value) {
   return String(value)
 }
 
-export default function Users({ apiBaseUrl }) {
-  const endpoint = `${apiBaseUrl}/users/`
+export default function Users() {
+  const endpoint = '/api/users/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)

@@ -44,8 +44,8 @@ function toDisplayValue(value) {
   return String(value)
 }
 
-export default function Activities({ apiBaseUrl }) {
-  const endpoint = `${apiBaseUrl}/activities/`
+export default function Activities() {
+  const endpoint = '/api/activities/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)

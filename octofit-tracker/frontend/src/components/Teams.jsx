@@ -44,8 +44,8 @@ function toDisplayValue(value) {
   return String(value)
 }
 
-export default function Teams({ apiBaseUrl }) {
-  const endpoint = `${apiBaseUrl}/teams/`
+export default function Teams() {
+  const endpoint = '/api/teams/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)
