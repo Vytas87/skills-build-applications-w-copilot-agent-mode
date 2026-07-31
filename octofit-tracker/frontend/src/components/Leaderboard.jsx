@@ -45,7 +45,10 @@ function toDisplayValue(value) {
 }
 
 export default function Leaderboard() {
-  const endpoint = '/api/leaderboard/'
+  const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim()
+  const endpoint = codespaceName
+    ? `https://${codespaceName}-8000.app.github.dev/api/leaderboard/`
+    : '/api/leaderboard/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)

@@ -45,7 +45,10 @@ function toDisplayValue(value) {
 }
 
 export default function Workouts() {
-  const endpoint = '/api/workouts/'
+  const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim()
+  const endpoint = codespaceName
+    ? `https://${codespaceName}-8000.app.github.dev/api/workouts/`
+    : '/api/workouts/'
   const [items, setItems] = useState([])
   const [pageInfo, setPageInfo] = useState(null)
   const [loading, setLoading] = useState(true)
