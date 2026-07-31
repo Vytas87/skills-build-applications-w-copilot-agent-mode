@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import cors from 'cors';
 import express from 'express';
 import db from './config/database';
 import activitiesRouter from './routes/activities';
@@ -15,6 +16,7 @@ const baseUrl = codespaceName
   : `http://localhost:${PORT}`;
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/users', usersRouter);
 app.use('/api/teams', teamsRouter);
